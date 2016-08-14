@@ -10,7 +10,7 @@
     </div>
     <div>
       <ol>
-        <li *ngFor="#item of current.choices; #ndx = index;">
+        <li *ngFor="let item of current.choices; let ndx = index;">
           <label>
             <input type="checkbox" [(ngModel)]='responses[ndx]' [disabled]="showAnswers">
             {{item.choice}}

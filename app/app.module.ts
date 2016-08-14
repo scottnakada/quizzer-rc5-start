@@ -14,8 +14,8 @@ import {MockBackend} from '@angular/http/testing';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
-  providers: [QuizService, FakeWebServer, MockBackend, HTTP_PROVIDERS],
-  declarations: [AppComponent, AboutComponent, LoginComponent, QuizComponent],
+  providers: [QuizService, FakeWebServer, MockBackend],
+  declarations: [AppComponent, HomeComponent, AboutComponent, LoginComponent, QuizComponent],
   bootstrap: [HomeComponent]
 })
 export class AppModule {

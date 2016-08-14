@@ -1,7 +1,7 @@
 <div>
   <div [hidden]="submitted">
     <h1>Login Form</h1>
-    <form (ngSubmit)="onSubmit()" #myForm="ngForm" >
+    <form (ngSubmit)="onSubmit()" #myForm="ngForm">
       <div>
         <label>User Name:
           <input type="text"
@@ -10,9 +10,9 @@
                  placeholder="(username)"
                  name="username"
                  #user="ngModel"
-                 >
+          >
         </label>
-        <span [hidden]="user.valid" >(Username is required)</span>
+        <span [hidden]="user.valid || user.pristine ">(Username is required)</span>
       </div>
       <div>
         <label>Password:
@@ -23,9 +23,9 @@
                  #pass="ngModel"
           >
         </label>
-        <span [hidden]="pass.valid" >(Password is required)</span>
+        <span [hidden]="pass.valid || pass.pristine">(Password is required)</span>
       </div>
-      <button type="submit">Login</button>
+      <button type="submit" [disabled]="myForm.form.invalid">Login</button>
     </form>
   </div>
 </div>

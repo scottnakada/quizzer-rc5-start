@@ -23,7 +23,7 @@ export class QuizService   {
   }
 
   public getQuiz(id){
-    quizList.filter((t) => t._id === id);
+    return (quizList.filter((t) => t._id === id))[0];
   }
 
   // Angular 2 is built for Observable, that's why it requires RxJS
