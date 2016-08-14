@@ -1,7 +1,7 @@
 <div>
   <div [hidden]="submitted">
     <h1>Login Form</h1>
-    <form (ngSubmit)="onSubmit()" #myForm="ngForm" #spy>
+    <form (ngSubmit)="onSubmit()" #myForm="ngForm" >
       <div>
         <label>User Name:
           <input type="text"
@@ -9,11 +9,10 @@
                  [(ngModel)]="username"
                  placeholder="(username)"
                  name="username"
+                 #user="ngModel"
                  >
         </label>
-        <div>
-          Name is required
-        </div>
+        <span [hidden]="user.valid" >(Username is required)</span>
       </div>
       <div>
         <label>Password:
