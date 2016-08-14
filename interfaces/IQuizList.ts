@@ -5,5 +5,5 @@ interface IQuizList {
   rating:number;
   _id:number;
   tags:string[];
-  suite:IQuestion[];
+  quiz:IQuiz;
 }

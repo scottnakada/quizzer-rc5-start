@@ -114,6 +114,8 @@ export class PlayerComponent implements OnInit {
     this.index = pos;
   }
 
+  // PLEASE IMPLEMENT THE PREVIOUS method
+
 
   next = () => this.seekToQuestion(Seek.Forward);
 }
