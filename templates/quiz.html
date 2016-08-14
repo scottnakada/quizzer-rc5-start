@@ -1,0 +1,8 @@
+<div *ngFor='let quiz of quizList'>
+  <div>
+    <a [routerLink]="['Player', {id: quiz._id}]">{{quiz.title}}</a>
+  </div>
+  <div>
+    <p class="address">{{quiz.tagLine}}</p>
+  </div>
+</div>

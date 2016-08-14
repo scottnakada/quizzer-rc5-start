@@ -1,0 +1,41 @@
+<div style="border: 1px dashed black;">
+  <div>
+    <span>{{title}}</span>
+    <span>{{index+1}} of {{total}}</span>
+  </div>
+
+  <div>
+    <div>
+      <span>{{current.question}}</span>
+    </div>
+    <div>
+      <ol>
+        <li *ngFor="#item of current.choices; #ndx = index;">
+          <label>
+            <input type="checkbox" [(ngModel)]='responses[ndx]' [disabled]="showAnswers">
+            {{item.choice}}
+          </label>
+          <span [hidden]="!(showAnswers && item.isAnswer)" style="color: green;">&nbsp;(answer)</span>
+        </li>
+      </ol>
+    </div>
+    <div>
+      <button [disabled]="index == 0" (click)="previous()">
+        Prev
+      </button>
+      <button [disabled]="index+1 == total" (click)="next()">
+        Next
+      </button>
+      <button (click)="score()">Score</button>
+    </div>
+  </div>
+
+  <div [hidden]="!showAnswers">
+    <div>
+      <span>Summary</span>
+    </div>
+    <div>
+      {{right}} out of {{total}} or {{(right / total) * 100 | number:'1.2-2' }}%
+    </div>
+  </div>
+</div>
