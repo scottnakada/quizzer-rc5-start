@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {QuizService} from './quiz-service';
 import {Seek} from './Seek';
 import {RouteParams} from "@angular/router-deprecated";
+import { MdButtonModule } from '@angular2-material/button';
 
 // an internal class
 class Position {

@@ -20,13 +20,13 @@
       </ol>
     </div>
     <div>
-      <button [disabled]="index == 0" (click)="previous()">
+      <button md-raised-button color="primary" [disabled]="index == 0" (click)="previous()">
         Prev
       </button>
-      <button [disabled]="index+1 == total" (click)="next()">
+      <button md-raised-button color="primary" [disabled]="index+1 == total" (click)="next()">
         Next
       </button>
-      <button (click)="score()">Score</button>
+      <button md-raised-button md-tooltip="This is a tooltip!"  color="accent" (click)="score()">Score</button>
     </div>
   </div>
 
