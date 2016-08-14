@@ -114,8 +114,23 @@ export class PlayerComponent implements OnInit {
     this.index = pos;
   }
 
-  // PLEASE IMPLEMENT THE PREVIOUS method
+  tabulate(questions, answers): number {
+    return questions.reduce((previousScore, currentQuestion, index) => {
+      let question = currentQuestion.choices.map((choice: IChoice) => !!choice.isAnswer);
+      let answer = answers[index];
+      let points = (answer && question.every((val, index) => val === answer[index])? 1: 0);
+      return previousScore + points;
+    }, 0);
+  }
 
+  previous = () => this.seekToQuestion(Seek.Backward);
 
   next = () => this.seekToQuestion(Seek.Forward);
+
+  score = () => {
+    this.seekToQuestion(Seek.Score);
+    this.right = this.tabulate(this.questions.quiz.questions, this.answers);
+    this.showAnswers = true;
+    this.seekToQuestion(Seek.Beginning);
+  }
 }
