@@ -9,11 +9,8 @@
                  [(ngModel)]="username"
                  placeholder="(username)"
                  name="username"
-                 #user="ngModel"
                  >
-          <div [hidden]="user.valid || user.pristine">username required</div>
         </label>
-        <br>TODO: remove this: {{spy.className}}
         <div>
           Name is required
         </div>
@@ -23,13 +20,10 @@
           <input type="password"
                  required
                  name="password"
-                 [(ngModel)]="password" ngControl="password"
-          #pass="ngModel"
           >
-          <div [hidden]="pass.valid || pass.pristine">password required</div>
         </label>
       </div>
-      <button type="submit" [disabled]="!myForm.form.valid">Login</button>
+      <button type="submit">Login</button>
     </form>
   </div>
 </div>

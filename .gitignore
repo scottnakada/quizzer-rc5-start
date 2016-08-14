@@ -33,4 +33,7 @@ node_modules
 *.map
 !lib/*.js
 
+!systemjs.config.*
+
+
 
