@@ -33,7 +33,8 @@ node_modules
 *.map
 !lib/*.js
 
-!systemjs.config.*
+!systemjs.config.js
+!karma.conf.js
 
 
 

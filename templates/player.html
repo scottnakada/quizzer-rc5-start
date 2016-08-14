@@ -12,7 +12,7 @@
       <ol>
         <li *ngFor="let item of current.choices; let ndx = index;">
           <label>
-            <input type="checkbox" [(ngModel)]='responses[ndx]' [disabled]="showAnswers">
+            <input md-checkbox type="checkbox" [(ngModel)]='responses[ndx]' [disabled]="showAnswers">
             {{item.choice}}
           </label>
           <span [hidden]="!(showAnswers && item.isAnswer)" style="color: green;">&nbsp;(answer)</span>
