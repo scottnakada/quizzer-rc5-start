@@ -4,6 +4,8 @@ import {AboutComponent} from './about';
 import {LoginComponent} from './login';
 import {QuizComponent} from './quiz';
 import {PlayerComponent} from './player';
+import {InsertDirective} from './insert';
+import {HelloComponent} from './hello';
 
 @RouteConfig([
   {
@@ -32,8 +34,9 @@ import {PlayerComponent} from './player';
 @Component({
   selector: 'home',
   templateUrl: './templates/home.html',
-  directives: [ROUTER_DIRECTIVES],
-  providers: [ROUTER_PROVIDERS]
+  directives: [ROUTER_DIRECTIVES, InsertDirective],
+  providers: [ROUTER_PROVIDERS],
+  entryComponents: [HelloComponent]
 })
 export class HomeComponent {
 }

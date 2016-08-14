@@ -36,5 +36,5 @@ node_modules
 !systemjs.config.js
 !karma.conf.js
 
-
+_test-output
 
