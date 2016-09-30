@@ -11,11 +11,10 @@ import {QuizService} from './quiz-service';
 import {Http, Response, HTTP_PROVIDERS} from '@angular/http';
 import {FakeWebServer} from './fake-webserver';
 import {MockBackend} from '@angular/http/testing';
-import {MdButtonModule} from '@angular2-material/button';
 
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, MdButtonModule],
+  imports: [BrowserModule, FormsModule ],
   providers: [QuizService, FakeWebServer, MockBackend],
   declarations: [AppComponent, HomeComponent, AboutComponent, LoginComponent, QuizComponent],
   bootstrap: [HomeComponent]
