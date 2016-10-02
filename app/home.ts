@@ -6,6 +6,7 @@ import {QuizComponent} from './quiz';
 import {PlayerComponent} from './player';
 import {InsertDirective} from './insert';
 import {HelloComponent} from './hello';
+import {Header_CompComponent} from './common/header_comp';
 
 @RouteConfig([
   {
