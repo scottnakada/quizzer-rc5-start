@@ -26,6 +26,11 @@ import {Header_CompComponent} from './common/header_comp';
     useAsDefault: true
   },
   {
+    path: '/hello',
+    name: 'Hello',
+    component: HelloComponent
+  },
+  {
     path: '/player/:id',
     name: 'Player',
     component: PlayerComponent
@@ -37,7 +42,7 @@ import {Header_CompComponent} from './common/header_comp';
   templateUrl: './templates/home.html',
   directives: [ROUTER_DIRECTIVES, InsertDirective],
   providers: [ROUTER_PROVIDERS],
-  entryComponents: [HelloComponent]
+  entryComponents: [QuizComponent]
 })
 export class HomeComponent {
 }
