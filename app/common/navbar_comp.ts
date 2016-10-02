@@ -7,8 +7,4 @@ import {Component} from '@angular/core';
 })
 export class Navbar_CompComponent {
 
-    isActive = function(viewLocation) {
-        console.log("Location = " + $location.path() + "\n");
-        return viewLocation === $location.path();
-    }
 }
